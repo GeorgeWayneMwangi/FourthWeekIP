@@ -30,19 +30,13 @@ section {
 }
 img {
   width: 100%;
-  max-width: 100%;*,
-*::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  max-width: 100%;
 }
 a {
   text-decoration: none;
 }
 p {
-  font-size: 1.6rem
+  font-size: 1.6rem;
 }
 .container {
   width: 100%;
@@ -98,7 +92,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,.8);
   z-index: 1000;
@@ -409,7 +403,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 24.5rem;
+  margin-left: 22.5rem;
 }
 @media screen and (min-width: 900px) {
   section{
@@ -497,7 +491,7 @@ footer {
     opacity: 1;
   }
   .newsletter-btn{
-    margin-left: 7.5rem;
+    margin-left: 22.5rem;
   }
 }
 @keyframes fadeUp {
