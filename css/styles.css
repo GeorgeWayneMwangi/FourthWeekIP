@@ -20,6 +20,10 @@ html {
   color: var(--body-font-color);
   scroll-behavior: smooth;
 }
+
+body {
+  overflow-x: hidden;
+}
 section {
   padding: 3.9rem 0;
 }
