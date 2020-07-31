@@ -179,6 +179,9 @@ header {
   height: .25rem;
   background-color: #fff;
   position: relative;
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: .9s;
 
 }
 .line-right::before,
@@ -188,6 +191,10 @@ header {
   top: 50%;
   transform: translateY(-50%);
   border: .6rem solid transparent;
+  animation: grow .5s forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+
 }
 .line-right::before {
   border-right-color: #fff;
@@ -499,6 +506,16 @@ footer {
 100% {
   opacity: 1;
   transform: scale(1);
+}
+
+}
+@keyframes grow {
+  0% {width: 0;
+
+}
+100% {
+  opacity: 1;
+  width: 100%;
 }
 
 }
