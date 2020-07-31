@@ -341,12 +341,14 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
+
 }
 .back-to-top i {
   display: block;
   color: #fff;
   font-size: 2rem;
   padding: 2rem;
+  animation: up 2s infinite;
 }
 .footer-content {
   /*overflow: hidden;*/
@@ -544,6 +546,20 @@ footer {
 100% {
   opacity: 1;
   transform: translateY(0);
+}
+
+}
+@keyframes up {
+  0% {opacity: 0;
+
+}
+50% {
+  opacity: 1;
+}
+100%{
+  opacity: 0;
+  transform: translateY(-1rem);
+
 }
 
 }
