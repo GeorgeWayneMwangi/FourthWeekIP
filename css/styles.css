@@ -193,7 +193,7 @@ header {
   border: .6rem solid transparent;
   animation: grow .5s forwards;
   animation-delay: 1.2s;
-  opacity: 0;
+  opacity:
 
 }
 .line-right::before {
@@ -208,6 +208,11 @@ header {
   font-style: 1.2rem;
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
+}
+.single-animation {
+  opacity: 0;
+  animation: fadeDown .5s forwards;
+  animation-delay: 1.5s;
 }
 .headline-description h5 {
   color: #fff;
@@ -516,6 +521,16 @@ footer {
 100% {
   opacity: 1;
   width: 100%;
+}
+
+}
+@keyframes fadeDown {
+  0% {transform: translateY(-1rem);
+
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 }
