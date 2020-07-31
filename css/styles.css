@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
   --main-font: 'Source Sans pro', sans-serif;
   --secondary-font:'Herr Von Muellerhoff', cursive;
@@ -18,7 +25,13 @@ section {
 }
 img {
   width: 100%;
-  max-width: 100%;
+  max-width: 100%;*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 }
 a {
   text-decoration: none;
@@ -132,6 +145,9 @@ header {
   font-weight: 100;
   line-height: .4;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .5s;
 }
 .first-letter{
   text-transform: uppercase;
@@ -145,6 +161,7 @@ header {
   font-weight: 900;
   letter-spacing: .5rem;
   margin-right: -.5rem;
+  animation: scale .5s forwards;
 }
 .separator {
   display: flex;
@@ -451,13 +468,33 @@ footer {
   }
   .social-media,
   .newsletter-form {
-    max-width: 27.3reml
+    max-width: 27.3rem;
     margin: 0 1rem;
   }
   .social-icons i {
     opacity: 1;
   }
   .newsletter-btn{
-    margin-left: 24.5rem;
+    margin-left: 7.5rem;
   }
+}
+@keyframes fadeUp {
+  0% {transform: translateY(4rem);
+
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+}
+@keyframes scale {
+  0% {transform: scale(2);
+
+}
+100% {
+  opacity: 1;
+  transform: scale(1);
+}
+
 }
