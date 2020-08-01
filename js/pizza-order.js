@@ -9,8 +9,9 @@ function Order(size,crust,toppings,number){
   this.toppings=toppings;
   this.number=number;
 }
-
-
+Name.prototype.fullName=function() {
+  return this.firstName + " " + this.lastName;
+}
 
 $(document).ready(function() {
   $("#add-new-pizza").click(function() {
@@ -45,28 +46,29 @@ $(document).ready(function() {
      var inputtedCrust = $(this).find("input.crust").val();
      var inputtedToppings = $(this).find("input.toppings").val();
      var inputtedNumberOfPizzas=parseInt($(this).find("input.number").val());
-     var newPizza = new Pizza(inputtedSize, inputtedCrust, inputtedToppings,inputtedNumberOfPizzas);
-     newName..push(newPizza)
+     var newPizza = new Order(inputtedSize, inputtedCrust, inputtedToppings,inputtedNumberOfPizzas);
+     newName.pizzas.push(newPizza)
    });
 
-   $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+   $("ul#summary").append("<li><span class='summary-order'>" + newName.fullName() + "</span></li>");
 
-   $(".contact").last().click(function() {
-     $("#show-contact").show();
-     $("#show-contact h2").text(newContact.fullName());
-     $(".first-name").text(newContact.firstName);
-     $(".last-name").text(newContact.lastName);
-     $("ul#addresses").text("");
-     newContact.addresses.forEach(function(address) {
-       $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.county + "</li>");
+   $(".summary-order").last().click(function() {
+     $("#show-order").show();
+     $("#show-order h2").text(newName.fullName());
+     $(".first-name").text(newName.firstName);
+     $(".last-name").text(newName.lastName);
+     $("ul#orders").text("");
+     newName.pizzas.forEach(function(order) {
+       $("ul#orders").append("<li>" + order.size + ", " + order.crust+ " " + order.toppings + " " +order.number + "</li>");
      });
    });
 
-   $("input#new-first-name").val("");
-   $("input#new-last-name").val("");
-   $("input.new-street").val("");
-   $("input.new-city").val("");
-   $("input.new-county").val("");
+   $("input#firstName").val("");
+   $("input#lastName").val("");
+   $("input.pizza-size").val("");
+   $("input.crust").val("");
+   $("input.toppings").val("");
+   parseInt($(this).find("input.number").val());
 
  });
 });
