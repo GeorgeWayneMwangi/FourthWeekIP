@@ -42,9 +42,9 @@ $(document).ready(function() {
    var newName = new Name(inputtedFirstName, inputtedLastName);
 
    $(".new-pizza").each(function() {
-     var inputtedSize = $(this).find("input.pizza-size").val();
-     var inputtedCrust = $(this).find("input.crust").val();
-     var inputtedToppings = $(this).find("input.toppings").val();
+     var inputtedSize = $(this).find("select.size").val();
+     var inputtedCrust = $(this).find("select.crust").val();
+     var inputtedToppings = $(this).find("select.toppings").val();
      var inputtedNumberOfPizzas=parseInt($(this).find("input.number").val());
      var newPizza = new Order(inputtedSize, inputtedCrust, inputtedToppings,inputtedNumberOfPizzas);
      newName.pizzas.push(newPizza)
@@ -65,9 +65,9 @@ $(document).ready(function() {
 
    $("input#firstName").val("");
    $("input#lastName").val("");
-   $("input.pizza-size").val("");
-   $("input.crust").val("");
-   $("input.toppings").val("");
+   $("select.size").val("");
+   $("select.crust").val("");
+   $("select.toppings").val("");
    parseInt($(this).find("input.number").val());
 
  });
