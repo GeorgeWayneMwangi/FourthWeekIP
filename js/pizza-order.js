@@ -1,3 +1,28 @@
+var small = {name: "Small",price :500};
+var medium = {name: "Medium", price: 800};
+var large = { name: "Large", price:1000};
+
+var pizzaSize= { name: "Size", type: [small,medium,large]};
+
+var none = {name: "None",price :0};
+var crispy = {name: "Crispy", price: 300};
+var stuffed = { name: "Stuffed", price:500};
+var gluttenFree = { name:"GluttenFree", price:700};
+
+var crust= { name: "Toppings", type: [none,crispy,stuffed,gluttenFree]};
+
+var none = {name: "None",price :0};
+var pepperoni = {name: "Pepperoni", price: 500};
+var onions= { name: "Onions", price:300};
+var mushrooms= { name:"Mushrooms", price:700};
+var sausage= { name:"Sausage", price:700};
+var bacon= { name:"bacon", price:700};
+
+
+var toppings= { name: "Toppings", type: [none,pepperoni,onions,bacon,sausage,mushrooms]};
+
+var price = [pizzaSize,crust,toppings];
+
 function Name(first,last){
   this.firstName = first;
   this.lastName= last;
@@ -15,25 +40,42 @@ Name.prototype.fullName=function() {
 
 $(document).ready(function() {
   $("#add-new-pizza").click(function() {
-    $("#new-pizzas").append('<div class="new-pizza">' +
-                                 '<div class="form-group">' +
-                                   '<label for="choose-pizza-size">Choose pizza size</label>' +
-                                   '<input type="text" class="form-control pizza-size">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="choose-crust">Choose crust</label>' +
-                                   '<input type="text" class="form-control crust">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="choose-toppings">Choose toppings</label>' +
-                                   '<input type="text" class="form-control toppings">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="amount">Number of Pizzas</label>' +
-                                   '<input type="number" class="form-control number">' +
-                                 '</div>' +
-                               '</div>');
-  });
+    $("#new-pizzas").append(  '<div class="new-pizza">' +
+        '<div class="form-group">'+
+        '<label for="choose-pizza-size">Choose pizza size</label>'+
+        '<select class="size">'+
+          '<option value="small">Small</option>'+
+          '<option value="medium">Medium</option>'+
+          '<option value="large">Large</option>'+
+        '</select>'+
+    '</div>'+
+    '<div class="form-group">'+
+      '<label for="choose-crust">Choose crust</label>'+
+      '<select class="crust">'+
+        '<option value="crust">None</option>'+
+        '<option value="crispy">Crispy</option>'+
+        '<option value="stuffed">Stuffed</option>'+
+        '<option value="glutten-free">Glutten-Free</option>'+
+      '</select>'+
+    '</div>'+
+    '<div class="form-group">'+
+      '<label for="choose-toppings">Choose toppings</label>'+
+      '<select class="toppings">'+
+        '<option value="none">None</option>'+
+        '<option value="pepperoni">Pepperoni</option>'+
+        '<option value="mushrooms">Mushrooms</option>'+
+        '<option value="onions">Onions</option>'+
+        '<option value="sausage">Sausage</option>'+
+        '<option value="bacon">Bacon</option>'+
+      '</select>'+
+    '</div>'+
+    '<div class="form-group">'+
+      '<label for="amount">Number of Pizzas</label>'+
+      '<input type="number" class="form-control number">'+
+    '</div>'
+  );
+});
+
   $("form#pizza-order").submit(function(event) {
    event.preventDefault();
 
@@ -61,6 +103,7 @@ $(document).ready(function() {
      newName.pizzas.forEach(function(order) {
        $("ul#orders").append("<li>" + order.size + ", " + order.crust+ " " + order.toppings + " " +order.number + "</li>");
      });
+
    });
 
    $("input#firstName").val("");
