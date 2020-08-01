@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>La Pizza del paeso</title>
+    <linl href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/scripts.js" charset="utf-8"></script>
+  </head>
+  <body >
+    <div class="container pizza-size">
+        <h1>Place your order:</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Enter details of your order</h2>
+          <form id="pizza-order">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName">
+            </div>
+            <div class="form-group">
+              <label for="firstName">Last Name</label>
+              <input type="text" class="form-control" id="lastName">
+            </div>
+
+            <div id="new-pizzas">
+              <div class="new-pizza">
+                <div class="form-group">
+                <label for="choose-pizza-size">Choose pizza size</label>
+              <input type="text" class="form-control pizza-size">
+            </div>
+            <div class="form-group">
+              <label for="choose-crust">Choose crust</label>
+              <input type="text" class="form-control crust">
+            </div>
+            <div class="form-group">
+              <label for="choose-toppings">Choose toppings</label>
+              <input type="text" class="form-control toppings">
+            </div>
+            <div class="form-group">
+              <label for="amount">Number of Pizzas</label>
+              <input type="number" class="form-control number">
+            </div>
+            <p>Do you want your pizza delivered to you?</p>
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="delivery-yes">Yes</label>
+              <input class="form-check-input" type="radio" name="delivery-yes" id="delivery-yes" value="delivery-yes" >
+            </div>
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="delivery-no">No</label>
+              <input  type="radio" class="form-check-input" name="delivery-no" id="delivery-no" value="delivery-no">
+            </div>
+          </div>
+        </div>
+        <span class="btn btn-primary" id="add-new-pizza">Order another pizza</span>
+
+            <button type="submit" class="btn">Place order</button>
+            </form>
+            <h2>Summary of order</h2>
+            <ul id="summary">
+
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div id="show-order">
+              <h2></h2>
+              <p>First name: <span class="first-name"></span></p>
+              <p>Last name: <span class="last-name"></span></p>
+              <p>Orders:</p>
+              <ul id="orders">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

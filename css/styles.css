@@ -128,10 +128,10 @@ header {
 .nav a:hover{
   color: var(--secondary-font-color);
 }
-.hero {
+.intro {
   width: 100%;
   height: 100vh;
-  background: url("../images/hero.jpg") center no-repeat;
+  background: url("../images/pizza5.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -148,6 +148,7 @@ header {
   animation: fadeUp .5s forwards;
   animation-delay: .5s;
 }
+
 .first-letter{
   text-transform: uppercase;
   font-size: 10.3rem
@@ -454,7 +455,7 @@ footer {
     font-size: 10rem;
   }
   .first-letter {
-    font-size: 4.7rem;
+    font-size: 9.7rem;
     letter-spacing: .8rem;
   }
   .line{
