@@ -19,11 +19,11 @@
           <form id="pizza-order">
             <div class="form-group">
               <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName">
+              <input type="text" class="form-control" id="firstName" required>
             </div>
             <div class="form-group">
               <label for="firstName">Last Name</label>
-              <input type="text" class="form-control" id="lastName">
+              <input type="text" class="form-control" id="lastName" r>
             </div>
 
             <div id="new-pizzas">
@@ -42,7 +42,7 @@
                 <option value="crust">None</option>
                 <option value="crispy">Crispy</option>
                 <option value="stuffed">Stuffed</option>
-                <option value="glutten-free">Glutten-Free</option>
+                <option value="glutten-free">GluttenFree</option>
               </select>
             </div>
             <div class="form-group">
@@ -60,7 +60,7 @@
             </div>
             <div class="form-group">
               <label for="amount">Number of Pizzas</label>
-              <input type="number" class="form-control number">
+              <input type="number" class="form-control number" required>
             </div>
             <p>Do you want your pizza delivered to you?</p>
             <div class="form-check form-check-inline">
@@ -87,6 +87,7 @@
               <h2></h2>
               <p>First name: <span class="first-name"></span></p>
               <p>Last name: <span class="last-name"></span></p>
+              <p>Total Amount: <spam class="order-amount"></span></p>
               <p>Orders:</p>
               <ul id="orders">
 
