@@ -12,13 +12,14 @@ function getValue() {
   var crustNum=parseInt(crust);
   var toppingNum=parseInt(toppings);
   if(document.getElementById('delivery-yes').checked==true) {
+    var answer = prompt("Where do you want your pizza delivered?");
     var totalPriceofOrder=((deliveryFee+sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas);
-    document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
+    document.getElementById("order-amount").innerHTML="Kshs" + totalPriceofOrder;
     alert("The delivery fee will be Kshs" + deliveryFee);
-    prompt("Where do you want your pizza delivered?")
+    alert("Your pizza will be delivered to your location.")
   }else if (document.getElementById('delivery-no').checked==true ){
     var totalPriceofOrder=((sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas)
-    document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
+    document.getElementById("order-amount").innerHTML="Kshs" + totalPriceofOrder;
   }}
 var small = {name: "Small",price :500};
 var medium = {name: "Medium", price: 800};
@@ -45,13 +46,7 @@ var toppings= { name: "Toppings", types: [none,pepperoni,onions,bacon,sausage,mu
 
 var pizzas = [pizzaSize,crust,toppings];
 
-pizzas.forEach(function(pizza) {
-  console.log(pizza.name + " prices:");
-  pizza.types.forEach(function(type) {
-    console.log(type.price);
-  });
-  console.log("\n");
-});
+
 
 function Name(first,last){
   this.firstName = first;
@@ -124,27 +119,6 @@ $(document).ready(function() {
      var newPizza = new Order(inputtedSize, inputtedCrust, inputtedToppings,inputtedNumberOfPizzas);
      newName.pizzas.push(newPizza)
    });
-   function getValue() {
-     var getSize=document.getElementById("size");
-     var size=getSize.options[getSizes.selectedIndex].value;
-     var getCrust=document.getElementById("crust");
-     var crust=getCrust.options[getCrust.selectedIndex].value;
-     var getToppings=document.getElementById("toppings");
-     var toppings=getToppings.options[getToppings.selectedIndex].value;
-     var sizeNum=parseInt(size);
-     var crustNum=parseInt(crust);
-     var toppingNum=parseInt(toppings);
-     if(document.getElementById('delivery-yes').checked==true) {
-       var totalPriceofOrder=((deliveryFee+sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas);
-       document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
-     }else if (document.getElementById('delivery-no').checked==true ){
-       var totalPriceofOrder=((sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas)
-       document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
-     }}
-
-
-
-
 
 
 
@@ -157,7 +131,7 @@ $(document).ready(function() {
      $(".last-name").text(newName.lastName);
      $("ul#orders").text("");
      newName.pizzas.forEach(function(order) {
-       $("ul#orders").append("<li>" +"SIZE:"+ order.size + " ," +"CRUST:" +order.crust+ ", " +"TOPPINGS:"+ order.toppings + ", "+"NO. OF PIZZAS:" +order.number + "</li>");
+       $("ul#orders").append("<li>" +"Size: Kshs"+ order.size + "  " +"Crust: Kshs" +order.crust+ "  " +"Toppings: Kshs"+ order.toppings + "  "+"No. of pizzas:" +order.number +"</li>");
      });
 
    });
