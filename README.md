@@ -18,14 +18,14 @@ This is a web application of a pizza place where customers order different sizes
 * Determine the cost for the crust
 * The total cost of a pizza should constitute, the crust, topping(s) and size of the pizza.
 * On checkout, the application displays the orders’ summary together with the total amount charged. For example, if the customer has made more than one pizza order, on checkout the application displays a summary of all the orders he/she has made and the total amount to pay for all his/her orders.
-##Project objectives
+## Project objectives
 * The project code uses constructors in Javascript.
 * The project makes use of prototypes in Javascript.
 * The project implements one or more Javascript functions.
 * The project separates the business logic code from the UI logic code.
 * The web app uses bootstrap and media queries to make it fully responsive.
 * The javascript code uses the correct syntax of camel case naming of variables. I.e var myVariable = "stores something"; instead of var my_var = "stores something", or, var MyVar = "stores something" , or,  var my-Var = "stores something"
-##Technical Requirements
+## Technical Requirements
 * The project should contain a well-documented README markdown file.
 * The project should be visually appealing and polished in a portfolio quality state.
 * The project should contain regular git commits with appropriate commit messages associated with them.
