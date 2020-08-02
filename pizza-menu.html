@@ -13,37 +13,37 @@
   <body >
     <div class="wrapper">
     <div class="container pizza-size">
-        <h1>Place your order:</h1>
-        <div class="row">
-          <div class="col-md-6">
-          <form id="pizza-order">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="First Name"required>
-            </div>
-            <div class="form-group">
-              <label for="firstName">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Last Name"required>
-            </div>
+      <h1>Place your order:</h1>
+      <div class="row">
+      <div class="col-md-6">
+        <form id="pizza-order">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name"required>
+          </div>
+          <div class="form-group">
+            <label for="firstName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name"required>
+          </div>
 
-            <div id="new-pizzas">
-              <div class="new-pizza">
-                <div class="form-group">
+          <div id="new-pizzas">
+            <div class="new-pizza">
+              <div class="form-group">
                 <label for="choose-pizza-size">Choose pizza size</label>
                 <select class="size" id="size">
                   <option id="small" value="500">Small</option>
                   <option id="medium" value="800">Medium</option>
                   <option id="large" value="1000">Large</option>
                 </select>
-            </div>
-            <div class="form-group">
-              <label for="choose-crust">Choose crust</label>
-              <select class="crust" id="crust">
-                <option id="none"value="0">None</option>
-                <option id="crispy" value="300">Crispy</option>
-                <option id="stuffed" value="500">Stuffed</option>
-                <option id="glutten" value="700">GluttenFree</option>
-              </select>
+             </div>
+             <div class="form-group">
+               <label for="choose-crust">Choose crust</label>
+               <select class="crust" id="crust">
+                 <option id="none"value="0">None</option>
+                 <option id="crispy" value="300">Crispy</option>
+                 <option id="stuffed" value="500">Stuffed</option>
+                 <option id="glutten" value="700">GluttenFree</option>
+               </select>
             </div>
             <div class="form-group">
               <label for="choose-toppings">Choose toppings</label>
@@ -75,31 +75,31 @@
         </div>
         <span onclick="getValue()"class="btn btn-primary" id="add-new-pizza">Order another pizza</span>
 
-            <button type="submit" class="btn cta-btn" onclick="getValue()">Place order</button>
-            </form>
-            <div id="summary-of-order">
-            <h2>Summary of order</h2>
-            <ul id="summary">
+        <button type="submit" class="btn cta-btn" onclick="getValue()">Place order</button>
+        </form>
+        <div id="summary-of-order">
+          <h2>Summary of order</h2>
+          <ul id="summary">
 
-            </ul>
-          </div>
-          </div>
-          <div class="col-md-6">
-            <div id="show-order">
-              <h2></h2>
-              <p>First name: <span class="first-name"></span></p>
-              <p>Last name: <span class="last-name"></span></p>
-              <p>Total Amount: <span id="order-amount"></span></p>
-              <p>Order:</p>
-              <ul id="orders">
-
-              </ul>
-              <p><a href="index.html">Back to home page.</a></p>
-
-            </div>
-          </div>
+          </ul>
         </div>
       </div>
+      <div class="col-md-6">
+        <div id="show-order">
+          <h2></h2>
+          <p>First name: <span class="first-name"></span></p>
+          <p>Last name: <span class="last-name"></span></p>
+          <p>Total Amount: <span id="order-amount"></span></p>
+          <p>Order:</p>
+          <ul id="orders">
+
+          </ul>
+          <p><a href="index.html">Back to home page.</a></p>
+
+        </div>
+      </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>
