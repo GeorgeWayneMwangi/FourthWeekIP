@@ -7,7 +7,7 @@
     <title>La Pizza del paeso</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/pizza-order.js" charset="utf-8"></script>
   </head>
   <body >
@@ -30,37 +30,37 @@
               <div class="new-pizza">
                 <div class="form-group">
                 <label for="choose-pizza-size">Choose pizza size</label>
-                <select class="size">
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
+                <select class="size" id="size">
+                  <option id="small" value="500">Small</option>
+                  <option id="medium" value="800">Medium</option>
+                  <option id="large" value="1000">Large</option>
                 </select>
             </div>
             <div class="form-group">
               <label for="choose-crust">Choose crust</label>
-              <select class="crust">
-                <option value="crust">None</option>
-                <option value="crispy">Crispy</option>
-                <option value="stuffed">Stuffed</option>
-                <option value="glutten-free">GluttenFree</option>
+              <select class="crust" id="crust">
+                <option id="none"value="0">None</option>
+                <option id="crispy" value="300">Crispy</option>
+                <option id="stuffed" value="500">Stuffed</option>
+                <option id="glutten" value="700">GluttenFree</option>
               </select>
             </div>
             <div class="form-group">
               <label for="choose-toppings">Choose toppings</label>
-              <select class="toppings">
-                <option value="none">None</option>
-                <option value="pepperoni">Pepperoni</option>
-                <option value="mushrooms">Mushrooms</option>
-                <option value="onions">Onions</option>
-                <option value="sausage">Sausage</option>
-                <option value="bacon">Bacon</option>
+              <select class="toppings" id="toppings" >
+                <option id="none" value="0">None</option>
+                <option id="pepperoni" value="500">Pepperoni</option>
+                <option id="mushrooms" value="700">Mushrooms</option>
+                <option id="onions" value="300">Onions</option>
+                <option id="sausage" value="700">Sausage</option>
+                <option id="bacon" value="700">Bacon</option>
 
 
               </select>
             </div>
             <div class="form-group">
               <label for="amount">Number of Pizzas</label>
-              <input type="number" class="form-control number" required>
+              <input type="number" class="form-control number" id="number"required>
             </div>
             <p>Do you want your pizza delivered to you?</p>
             <div class="form-check form-check-inline">
@@ -75,7 +75,7 @@
         </div>
         <span class="btn btn-primary" id="add-new-pizza">Order another pizza</span>
 
-            <button type="submit" class="btn">Place order</button>
+            <button type="submit" class="btn" onclick="getValue()">Place order</button>
             </form>
             <h2>Summary of order</h2>
             <ul id="summary">
@@ -87,7 +87,7 @@
               <h2></h2>
               <p>First name: <span class="first-name"></span></p>
               <p>Last name: <span class="last-name"></span></p>
-              <p>Total Amount: <spam class="order-amount"></span></p>
+              <p>Total Amount: <span id="order-amount"></span></p>
               <p>Orders:</p>
               <ul id="orders">
 
