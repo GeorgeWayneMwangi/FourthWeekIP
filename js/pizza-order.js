@@ -14,6 +14,8 @@ function getValue() {
   if(document.getElementById('delivery-yes').checked==true) {
     var totalPriceofOrder=((deliveryFee+sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas);
     document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
+    alert("The delivery fee will be Kshs" + deliveryFee);
+    prompt("Where do you want your pizza delivered?")
   }else if (document.getElementById('delivery-no').checked==true ){
     var totalPriceofOrder=((sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas)
     document.getElementById("order-amount").innerHTML="Your total charge:" + totalPriceofOrder;
@@ -155,7 +157,7 @@ $(document).ready(function() {
      $(".last-name").text(newName.lastName);
      $("ul#orders").text("");
      newName.pizzas.forEach(function(order) {
-       $("ul#orders").append("<li>" + order.size + ", " + order.crust+ ", " + order.toppings + ", " +order.number + "</li>");
+       $("ul#orders").append("<li>" +"SIZE:"+ order.size + " ," +"CRUST:" +order.crust+ ", " +"TOPPINGS:"+ order.toppings + ", "+"NO. OF PIZZAS:" +order.number + "</li>");
      });
 
    });

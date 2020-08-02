@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+
+}
+body {
+  background: url('../images/pizza5.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+
+}
+.wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+
+}
+#pizza-order {
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px;
+}
+
+
+.cta-btn {
+  background: red;
+  text-align: center;
+  padding: 10px;
+  border-radius: 2px;
+  color:#fff;
+  cursor: pointer;
+  text-transform: uppercase;
+
+
+}
+#show-order {
+  display: none;
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px;
+}
+#summary-of-order {
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px;
+}
+
+#summary {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#summary:hover {
+  text-decoration: underline;
+}

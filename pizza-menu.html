@@ -6,24 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>La Pizza del paeso</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/pizza-styles.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/pizza-order.js" charset="utf-8"></script>
   </head>
   <body >
+    <div class="wrapper">
     <div class="container pizza-size">
         <h1>Place your order:</h1>
         <div class="row">
           <div class="col-md-6">
-            <h2>Enter details of your order</h2>
           <form id="pizza-order">
             <div class="form-group">
               <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName" required>
+              <input type="text" class="form-control" id="firstName" placeholder="First Name"required>
             </div>
             <div class="form-group">
               <label for="firstName">Last Name</label>
-              <input type="text" class="form-control" id="lastName" r>
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name"required>
             </div>
 
             <div id="new-pizzas">
@@ -60,27 +60,29 @@
             </div>
             <div class="form-group">
               <label for="amount">Number of Pizzas</label>
-              <input type="number" class="form-control number" id="number"required>
+              <input type="number" class="form-control number" id="number"required placeholder="Number of pizzas">
             </div>
             <p>Do you want your pizza delivered to you?</p>
             <div class="form-check form-check-inline">
               <label class="form-check-label" for="delivery-yes">Yes</label>
-              <input class="form-check-input" type="radio" name="delivery-yes" id="delivery-yes" value="delivery-yes" >
+              <input class="form-check-input" type="radio" name="delivery" id="delivery-yes" value="delivery-yes" >
             </div>
             <div class="form-check form-check-inline">
               <label class="form-check-label" for="delivery-no">No</label>
-              <input  type="radio" class="form-check-input" name="delivery-no" id="delivery-no" value="delivery-no">
+              <input  type="radio" class="form-check-input" name="delivery" id="delivery-no" value="delivery-no"  >
             </div>
           </div>
         </div>
-        <span class="btn btn-primary" id="add-new-pizza">Order another pizza</span>
+        <span onclick="getValue()"class="btn btn-primary" id="add-new-pizza">Order another pizza</span>
 
-            <button type="submit" class="btn" onclick="getValue()">Place order</button>
+            <button type="submit" class="btn cta-btn" onclick="getValue()">Place order</button>
             </form>
+            <div id="summary-of-order">
             <h2>Summary of order</h2>
             <ul id="summary">
 
             </ul>
+          </div>
           </div>
           <div class="col-md-6">
             <div id="show-order">
@@ -96,5 +98,6 @@
           </div>
         </div>
       </div>
+    </div>
   </body>
 </html>
