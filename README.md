@@ -46,8 +46,8 @@ This is a web application of a pizza place where customers order different sizes
 
 
 ## Known Bugs
-* When placing another order, the total is not computed for all orders combined.
-* The order page is not responsive.(working on it)
+* When placing another order, the total is not computed for all orders combined. There is no consistency in the display of the order.
+* The pizza order page is not responsive.(working on it)
 
 ## License
 > MIT License c (2020) George Wayne Mwangi

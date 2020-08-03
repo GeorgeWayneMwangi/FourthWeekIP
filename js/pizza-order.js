@@ -13,6 +13,7 @@ function getValue() {
   var toppingNum=parseInt(toppings);
   if(document.getElementById('delivery-yes').checked==true) {
     var answer = prompt("Where do you want your pizza delivered?");
+    document.getElementById("location").innerHTML="Your pizza will be delivered to " + answer
     var totalPriceofOrder=((deliveryFee+sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas);
     document.getElementById("order-amount").innerHTML="Kshs" + totalPriceofOrder;
     alert("The delivery fee will be Kshs" + deliveryFee);
@@ -20,6 +21,7 @@ function getValue() {
   }else if (document.getElementById('delivery-no').checked==true ){
     var totalPriceofOrder=((sizeNum+crustNum+toppingNum)*inputtedNumberOfPizzas)
     document.getElementById("order-amount").innerHTML="Kshs" + totalPriceofOrder;
+
   }}
 var small = {name: "Small",price :500};
 var medium = {name: "Medium", price: 800};
